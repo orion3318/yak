@@ -5,18 +5,13 @@
 <style>
 /* 레이아웃: 한 줄짜리 세로 흐름, 큰 글씨, 섹션마다 굵은 제목 + 짧은 문장 */
 :root{
+  color-scheme:light;
   --bg:#f7f9fb; --card:#ffffff; --fg:#14202b; --muted:#4a5866;
   --accent:#0b5c8a; --accent-soft:#e2eef6; --warn:#a3361a; --warn-soft:#fbe9e3; --line:#cfd9e2;
   --display:"Gothic A1","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
   --body:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
   --base:21px;
 }
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#0f161d; --card:#17212b; --fg:#eef3f7; --muted:#b4c2cf;
-  --accent:#7cc4ee; --accent-soft:#1c3446; --warn:#ff9d80; --warn-soft:#3a211a; --line:#2c3a47; color-scheme:dark}}
-:root[data-theme="dark"]{
-  --bg:#0f161d; --card:#17212b; --fg:#eef3f7; --muted:#b4c2cf;
-  --accent:#7cc4ee; --accent-soft:#1c3446; --warn:#ff9d80; --warn-soft:#3a211a; --line:#2c3a47; color-scheme:dark}
 html{font-size:var(--base)}
 html.big{font-size:26px}
 body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:1rem;line-height:1.65;word-break:keep-all}

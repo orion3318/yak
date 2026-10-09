@@ -10,18 +10,13 @@
 /* 레이아웃: 약 안내문과 같은 톤, 큰 번호 버튼을 세로로 나열 (번호 = 약통에 붙인 번호)
    약 목록은 drugs.json 한 곳에서만 관리합니다. */
 :root{
+  color-scheme:light;
   --bg:#f7f9fb; --card:#ffffff; --fg:#14202b; --muted:#4a5866;
   --accent:#0b5c8a; --accent-soft:#e2eef6; --line:#cfd9e2;
   --display:"Gothic A1","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
   --body:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
   --base:21px;
 }
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#0f161d; --card:#17212b; --fg:#eef3f7; --muted:#b4c2cf;
-  --accent:#7cc4ee; --accent-soft:#1c3446; --line:#2c3a47; color-scheme:dark}}
-:root[data-theme="dark"]{
-  --bg:#0f161d; --card:#17212b; --fg:#eef3f7; --muted:#b4c2cf;
-  --accent:#7cc4ee; --accent-soft:#1c3446; --line:#2c3a47; color-scheme:dark}
 html{font-size:var(--base)}
 html.big{font-size:26px}
 body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:1rem;line-height:1.5;word-break:keep-all}
