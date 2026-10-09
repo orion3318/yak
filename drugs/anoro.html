@@ -267,7 +267,7 @@ td.n,th.n{text-align:right;white-space:nowrap}
 (function(){
   var btn=document.getElementById('sizeBtn'), root=document.documentElement;
   function set(on){root.classList.toggle('big',on);btn.setAttribute('aria-pressed',on);btn.textContent=on?'글씨 보통':'글씨 크게';}
-  try{set(localStorage.getItem('bigText')==='1');}catch(e){}
+  var on0=true;try{on0=localStorage.getItem('bigText')!=='0';}catch(e){}set(on0);
   btn.addEventListener('click',function(){var on=!root.classList.contains('big');set(on);try{localStorage.setItem('bigText',on?'1':'0');}catch(e){}});
   var ob=document.getElementById('openBtn'), ds=document.querySelectorAll('details');
   function sync(){var all=Array.prototype.every.call(ds,function(d){return d.open;});ob.textContent=all?'모두 접기':'모두 펼치기';}
