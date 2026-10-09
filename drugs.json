@@ -2,7 +2,7 @@
   { "no": 1, "name": "디쿠아벨",          "kind": "점안액",         "file": "drugs/dikuabel.html" },
   { "no": 2, "name": "코솝",              "kind": "점안액",         "file": "drugs/cosopt.html" },
   { "no": 3, "name": "루미간",            "kind": "점안액",         "file": "drugs/lumigan.html" },
-  { "no": 4, "name": "리포직",            "kind": "점안액",         "file": "drugs/liposic.html" },
+  { "no": 4, "name": "리포직",            "kind": "점안겔",         "file": "drugs/liposic.html" },
   { "no": 5, "name": "로테플러스",        "kind": "점안액",         "file": "drugs/roteplus.html" },
   { "no": 7, "name": "하메론에이",        "kind": "점안액",         "file": "drugs/hameron.html" },
   { "no": 8, "name": "아노로 62.5 엘립타", "kind": "흡입제", "file": "drugs/anoro.html" }
