@@ -1,0 +1,251 @@
+<!doctype html><html lang="ko"><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>루미간 점안액 안내</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;600;700&family=Gothic+A1:wght@800;900&display=swap">
+<style>
+/* 레이아웃: 한 줄짜리 세로 흐름, 큰 글씨, 섹션마다 굵은 제목 + 짧은 문장 */
+:root{
+  --bg:#f7f9fb; --card:#ffffff; --fg:#14202b; --muted:#4a5866;
+  --accent:#0b5c8a; --accent-soft:#e2eef6; --warn:#a3361a; --warn-soft:#fbe9e3; --line:#cfd9e2;
+  --display:"Gothic A1","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --body:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --base:21px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f161d; --card:#17212b; --fg:#eef3f7; --muted:#b4c2cf;
+  --accent:#7cc4ee; --accent-soft:#1c3446; --warn:#ff9d80; --warn-soft:#3a211a; --line:#2c3a47; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f161d; --card:#17212b; --fg:#eef3f7; --muted:#b4c2cf;
+  --accent:#7cc4ee; --accent-soft:#1c3446; --warn:#ff9d80; --warn-soft:#3a211a; --line:#2c3a47; color-scheme:dark}
+html{font-size:var(--base)}
+html.big{font-size:26px}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:1rem;line-height:1.65;word-break:keep-all}
+.wrap{max-width:40rem;margin:0 auto;padding-inline:16px;padding-block:20px 48px;display:flex;flex-direction:column;gap:1.1rem}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.tag{font-size:.8rem;font-weight:700;color:var(--accent);background:var(--accent-soft);padding:.2rem .7rem;border-radius:99px}
+.size{font:inherit;font-size:.85rem;font-weight:700;color:var(--fg);background:var(--card);border:2px solid var(--line);border-radius:12px;padding:.35rem .9rem;cursor:pointer;min-height:48px}
+.size:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+h1{font-family:var(--display);font-weight:900;font-size:2rem;line-height:1.2;margin:0;text-wrap:balance}
+.sub{color:var(--muted);margin:.2rem 0 0;font-size:.9rem}
+.dose{background:var(--accent);color:var(--bg);border-radius:18px;padding:1.1rem 1.2rem;display:flex;flex-direction:column;gap:.2rem}
+.dose b{font-family:var(--display);font-weight:900;font-size:1.7rem;line-height:1.25}
+.dose span{font-size:.95rem}
+section{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:1.1rem 1.2rem;display:flex;flex-direction:column;gap:.6rem;min-width:0}
+h2{font-family:var(--display);font-weight:800;font-size:1.3rem;margin:0;color:var(--accent)}
+section.warn{background:var(--warn-soft);border-color:var(--warn)}
+section.warn h2{color:var(--warn)}
+p{margin:0}
+ul,ol{margin:0;padding-left:1.4rem;display:flex;flex-direction:column;gap:.5rem}
+ol.steps{list-style:none;padding:0;counter-reset:s;gap:.8rem}
+ol.steps li{counter-increment:s;display:grid;grid-template-columns:2.2rem 1fr;gap:.7rem;align-items:start}
+ol.steps li::before{content:counter(s);font-family:var(--display);font-weight:900;width:2.2rem;height:2.2rem;border-radius:50%;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;font-size:1.05rem}
+.side{display:flex;flex-wrap:wrap;gap:.5rem}
+.side span{background:var(--accent-soft);border-radius:10px;padding:.25rem .7rem;font-size:.9rem}
+.phone{font-family:var(--display);font-weight:800;font-size:1.4rem;letter-spacing:.02em;user-select:all;font-variant-numeric:tabular-nums}
+.note{color:var(--muted);font-size:.8rem}
+small{font-size:.8rem;color:var(--muted)}
+details{border-top:1px dashed var(--line);padding-top:.6rem}
+summary{cursor:pointer;list-style:none;display:inline-flex;align-items:center;gap:.4rem;font-weight:700;color:var(--accent);min-height:48px;padding:.2rem .1rem;text-decoration:underline;text-underline-offset:4px}
+section.warn summary{color:var(--warn)}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:var(--display);font-weight:900;font-size:1.2rem;text-decoration:none;display:inline-block}
+details[open] summary::after{content:"−"}
+summary:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:6px}
+.more{display:flex;flex-direction:column;gap:.6rem;font-size:.92rem;padding-top:.3rem}
+.more h3{font-size:.95rem;margin:.3rem 0 0;font-weight:700}
+.tbl{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:.88rem;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:.4rem .5rem;border-bottom:1px solid var(--line);vertical-align:top}
+td.n,th.n{text-align:right;white-space:nowrap}
+.link{display:inline-block;color:var(--accent);font-weight:700;text-underline-offset:4px;padding:.3rem 0}
+.toggles{display:flex;gap:.5rem;flex-wrap:wrap}
+.back{display:inline-flex;align-items:center;min-height:48px;font-weight:700;font-size:1rem;color:var(--accent);text-decoration:underline;text-underline-offset:4px}.back:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:6px}
+</style>
+
+<div class="wrap">
+  <a class="back" href="../index.html">← 약 목록으로</a>
+  <div class="top">
+    <span class="tag">눈에 넣는 약 · 전문의약품</span>
+    <div class="toggles">
+      <button class="size" id="openBtn" type="button">모두 펼치기</button>
+      <button class="size" id="sizeBtn" type="button" aria-pressed="false">글씨 크게</button>
+    </div>
+  </div>
+
+  <header>
+    <h1>루미간 점안액 0.01%</h1>
+    <p class="sub">녹내장·안압 치료제 · 여러 번 쓰는 병 · 한국애브비 수입의약품</p>
+  </header>
+
+  <div class="dose" role="note">
+    <b>한 번에 1방울<br>하루 1번, 저녁에</b>
+    <span>의사·약사가 다르게 알려줬다면 그 말씀을 따르세요.</span>
+  </div>
+
+  <section>
+    <h2>어떤 약인가요?</h2>
+    <p><b>눈 속 압력(안압)이 높은 분</b>의 안압을 낮춰 주는 안약입니다(개방각 녹내장, 고안압증).</p>
+    <details>
+      <summary>자세히 보기</summary>
+      <div class="more">
+        <h3>효능·효과</h3>
+        <p>개방각 녹내장과 고안압증에서 높아진 안압을 낮춥니다.</p>
+        <h3>어떻게 작용하나요?</h3>
+        <p>눈 속에 차는 물(방수)이 눈 밖으로 잘 빠져나가도록 도와 안압을 낮춥니다. 프로스타글란딘 계열 약입니다.</p>
+        <p class="note">작용 원리는 일반적인 설명입니다.</p>
+        <h3>언제부터 효과가 나나요?</h3>
+        <p>같은 성분의 진한 약(0.03%) 기준으로, 넣고 약 4시간 뒤부터 안압이 내려가기 시작해 8~12시간 뒤에 가장 많이 내려갑니다.</p>
+        <h3>성분 (1mL 중)</h3>
+        <p>비마토프로스트 0.1mg.</p>
+        <p>보존제로 벤잘코늄염화물 0.2mg이 들어 있습니다. 첨가제는 수산화나트륨, 시트르산수화물, 염산, 염화나트륨, 인산수소나트륨칠수화물, 정제수입니다.</p>
+        <h3>모양</h3>
+        <p>색이 없는 맑은 액체가 불투명한 플라스틱 병(3mL)에 들어 있습니다.</p>
+      </div>
+    </details>
+  </section>
+
+  <section>
+    <h2>넣는 방법</h2>
+    <ol class="steps">
+      <li><span>손을 비누로 깨끗이 씻습니다.</span></li>
+      <li><span>병 뚜껑을 엽니다.</span></li>
+      <li><span>고개를 뒤로 젖히고 아래 눈꺼풀을 살짝 당깁니다.</span></li>
+      <li><span><b>1방울</b> 넣습니다. 병 끝이 눈·속눈썹·손가락에 <b>닿지 않게</b> 합니다.</span></li>
+      <li><span>눈을 감고 1~2분쯤 눈 안쪽 끝(코 쪽)을 가볍게 누릅니다.</span></li>
+      <li><span>볼이나 눈가로 흘러내린 약은 <b>바로 닦아 냅니다.</b></span></li>
+      <li><span>뚜껑을 꼭 닫습니다.</span></li>
+    </ol>
+    <details>
+      <summary>자세히 보기</summary>
+      <div class="more">
+        <h3>하루 1번, 저녁에</h3>
+        <p>매일 저녁 같은 시간에 넣으세요. 예를 들면 저녁 9시, 잠자리에 들기 전입니다. 녹내장 약을 여러 개 쓰신다면 시간을 함께 정해 두면 잊지 않기 좋습니다.</p>
+        <p class="note">시간 예시는 일반적인 사용 요령입니다.</p>
+        <h3>잊어버렸을 때</h3>
+        <p>생각나면 바로 1방울 넣고, 그 다음부터는 원래대로 규칙적으로 넣으세요. 이 약은 자주 넣으면 효과가 떨어지므로 두 번 몫을 한꺼번에 넣지 마세요.</p>
+        <h3>흘러내린 약을 닦는 이유</h3>
+        <p>약이 계속 닿는 피부에 털이 자라거나 피부색이 짙어질 수 있습니다. 볼 등 다른 피부로 흐르지 않게 하세요.</p>
+        <h3>눈 안쪽 끝을 누르는 이유</h3>
+        <p>약이 코로 흘러 내려가지 않고 눈에 오래 머물게 하는 일반적인 요령입니다.</p>
+        <h3>병 끝이 왜 닿으면 안 되나요?</h3>
+        <p>병이 균에 오염될 수 있습니다. 오염된 안약을 쓰면 눈이 심하게 다치거나 <b>시력을 잃을 수도</b> 있습니다. 다른 사람과 함께 쓰지 마세요.</p>
+        <h3>콘택트렌즈를 끼는 분</h3>
+        <p>보존제(벤잘코늄)가 소프트 렌즈에 스며들 수 있습니다. 렌즈를 빼고 넣고, <b>15분 이상</b> 지난 뒤 다시 끼세요.</p>
+        <h3>운전할 때</h3>
+        <p>넣은 직후 잠깐 흐리게 보이면, 잘 보일 때까지 기다린 뒤 운전하세요.</p>
+      </div>
+    </details>
+  </section>
+
+  <section class="warn">
+    <h2>꼭 지켜 주세요</h2>
+    <ul>
+      <li><b>하루 1번만</b> 넣으세요. 더 자주 넣으면 오히려 효과가 떨어집니다.</li>
+      <li>오래 쓰면 <b>눈동자 둘레 갈색 부분(홍채)·눈꺼풀·속눈썹 색이 짙어질</b> 수 있고, 홍채 색은 약을 끊어도 그대로일 수 있습니다.</li>
+      <li>눈 주변이 꺼지거나 눈꺼풀이 처지는 변화가 생길 수 있습니다. 눈 모양이 달라 보이면 <b>의사에게 알리세요.</b></li>
+      <li>병을 연 뒤 <b>4주가 지나면</b> 남은 약은 버립니다.</li>
+      <li>다른 안약도 쓰신다면 <b>5분 이상</b> 간격을 두세요.</li>
+    </ul>
+    <details>
+      <summary>자세히 보기</summary>
+      <div class="more">
+        <h3>쓰면 안 되는 분</h3>
+        <p>이 약이나 이 약의 성분에 알레르기(과민증)가 있었던 분.</p>
+        <h3>조심해서 써야 하는 분</h3>
+        <ul>
+          <li>눈 속 염증(포도막염, 홍채염)이나 눈의 바이러스 감염이 있는 분</li>
+          <li>백내장 수술 등 눈 수술을 받은 분, 망막 혈관이 막힌 적이 있는 분, 당뇨로 망막병증이 있는 분: 망막 중심부(황반)가 부을 수 있습니다.</li>
+          <li>콩팥·간이 나쁘거나 호흡 기능이 떨어진 분</li>
+          <li><b>맥박이 느리거나 혈압이 낮은 분</b></li>
+          <li>눈이 마른 분, 검은자(각막)가 약한 분: 보존제 때문에 각막에 상처가 생길 수 있습니다.</li>
+          <li>개방각이 아닌 다른 종류의 녹내장(폐쇄각, 염증성 등)에는 연구되지 않았습니다.</li>
+        </ul>
+        <h3>색 변화에 대해</h3>
+        <p>홍채 색 변화는 아주 천천히 생겨서 몇 달에서 몇 년 동안 모를 수 있습니다. 보통 눈동자 가운데 둘레부터 갈색이 퍼져 나갑니다. 한쪽 눈에만 넣으면 두 눈 색이 달라 보일 수 있습니다. 눈꺼풀·속눈썹 변화는 끊으면 일부 돌아오기도 합니다. 꾸준히 쓰는 동안 정기적으로 눈 검사를 받으세요.</p>
+        <h3>눈 주변 모양 변화</h3>
+        <p>눈 주변 지방이 줄어 눈꺼풀 고랑이 깊어지거나, 눈꺼풀이 처지거나, 눈이 꺼져 보일 수 있습니다. 빠르면 시작 1개월 뒤에 나타나고 보통 가볍습니다. 약을 끊거나 다른 약으로 바꾸면 일부 또는 전부 돌아온 것으로 보고되었습니다.</p>
+        <h3>다른 녹내장 약과 함께 쓸 때</h3>
+        <p>같은 계열(프로스타글란딘) 안약과 같이 쓰면 안압이 덜 내려갈 수 있습니다. 쓰는 안약을 모두 의사에게 알리세요.</p>
+        <h3>임신 중이거나 수유 중인 분</h3>
+        <p>안전성이 확립되지 않았습니다. 의사가 이익이 더 크다고 판단할 때만 씁니다.</p>
+        <h3>어린이 · 고령자</h3>
+        <p>어린이에 대한 안전성과 효과는 확립되지 않았습니다. 고령자와 젊은 사람 사이에 안전성·효과 차이는 관찰되지 않았습니다.</p>
+      </div>
+    </details>
+  </section>
+
+  <section>
+    <h2>이런 증상이 생길 수 있어요</h2>
+    <div class="side">
+      <span>눈 충혈</span><span>눈 가려움</span><span>눈 따끔거림</span><span>속눈썹이 길어짐</span><span>눈꺼풀 붉어짐</span><span>눈가 피부 색 짙어짐</span>
+    </div>
+    <p>눈 충혈은 흔하고 대부분 가볍습니다. 하지만 <b>눈이 붓고 아프거나, 눈곱이 많이 끼거나, 잘 안 보이거나, 숨이 차면</b> 의사에게 바로 알리세요.</p>
+    <details>
+      <summary>자세히 보기 (얼마나 자주 생기나요?)</summary>
+      <div class="more">
+        <h3>12개월 임상시험에서 보고된 증상</h3>
+        <div class="tbl"><table>
+          <thead><tr><th>증상</th><th class="n">빈도</th></tr></thead>
+          <tbody>
+            <tr><td>결막 충혈(눈 흰자가 붉어짐)</td><td class="n">10명 중 1명 이상</td></tr>
+            <tr><td>눈 자극감, 눈 가려움, 속눈썹 성장, 각막 표면의 작은 상처(점상각막염), 눈꺼풀 붉어짐·가려움, 피부색 짙어짐, 털이 많아짐, 넣은 자리 따끔거림</td><td class="n">100명 중 1~10명</td></tr>
+            <tr><td>눈 피로, 시야 흐림, 결막 부기, 홍채 색 짙어짐, 눈썹 빠짐, 눈꺼풀 부기, 마른 피부, 두통, 메스꺼움</td><td class="n">1,000명 중 1~10명</td></tr>
+          </tbody>
+        </table></div>
+        <p>100명 중 약 38명이 어떤 증상이든 겪었고, 가장 흔한 결막 충혈은 약 29명이었습니다. 대부분 가벼웠고, 증상 때문에 약을 끊은 사람은 100명 중 약 4명이었습니다.</p>
+        <h3>외국 시판 후 보고</h3>
+        <p>눈 통증, 눈 마름, 눈물·눈곱 증가, 망막 중심부 부기(황반부종), 눈 주변 모양 변화, 알레르기 반응, 어지러움, 고혈압이 보고되었습니다. 드물게 <b>천식 악화, 숨참, 만성 폐질환(COPD) 악화</b>도 보고되었습니다.</p>
+        <h3>각막이 많이 상한 분</h3>
+        <p>이 약에는 인산염이 들어 있습니다. 각막이 심하게 상한 일부 환자에게서 각막에 석회가 끼는 일이 매우 드물게 보고되었습니다.</p>
+        <h3>부작용이 생겼다면</h3>
+        <p>심한 부작용으로 피해를 입은 경우 한국의약품안전관리원(1644-6223 또는 14-3330)에 피해구제를 신청할 수 있습니다.</p>
+        <p class="note">수치는 사진 속 설명서에서 읽은 것으로, 흐린 부분은 원본과 다를 수 있습니다.</p>
+      </div>
+    </details>
+  </section>
+
+  <section>
+    <h2>보관 방법</h2>
+    <ul>
+      <li>원래 병 그대로, 실온(15~25℃)에</li>
+      <li>어린이 손이 닿지 않는 곳</li>
+      <li>다른 통에 옮겨 담지 않기</li>
+      <li>연 날짜를 병이나 상자에 적어 두기</li>
+    </ul>
+    <p class="note">마지막 항목은 4주 기한을 지키기 위한 일반적인 요령입니다.</p>
+    <details>
+      <summary>자세히 보기</summary>
+      <div class="more">
+        <p>빛을 막고 공기가 잘 들어가지 않는 병(차광기밀용기)입니다. 빛을 막기 위해 <b>반드시 상자에 넣어</b> 보관하세요.</p>
+        <p>사용기간은 만든 날로부터 24개월입니다. 연 뒤에는 4주 안에 쓰고, 남으면 버리세요.</p>
+        <p>유효기간이 지났거나, 색이 변했거나, 병이 상한 제품은 쓰지 마세요. 산 곳에서 교환할 수 있습니다.</p>
+      </div>
+    </details>
+  </section>
+
+  <section>
+    <h2>궁금할 때 전화</h2>
+    <p>한국애브비</p>
+    <p class="phone">02-3429-9300</p>
+    <p>약 부작용 피해구제 상담 (한국의약품안전관리원)</p>
+    <p class="phone">1644-6223</p>
+    <a class="link" href="https://nedrug.mfds.go.kr/searchDrug?itemName=%EB%A3%A8%EB%AF%B8%EA%B0%84" target="_blank" rel="noopener">식약처 의약품안전나라에서 공식 설명서 보기 ↗</a>
+  </section>
+
+  <small>성분: 1mL 중 비마토프로스트 0.1mg(보존제 벤잘코늄염화물 0.2mg 포함) · 3mL/병. 제조 Allergan Pharmaceuticals Ireland, 수입 한국애브비. 설명서 개정일 2023년 3월 31일. 제품 설명서를 쉽게 정리한 안내이며, 자세한 내용은 원래 설명서와 의사·약사의 안내를 따르세요.</small>
+</div>
+
+<script>
+(function(){
+  var btn=document.getElementById('sizeBtn'), root=document.documentElement;
+  function set(on){root.classList.toggle('big',on);btn.setAttribute('aria-pressed',on);btn.textContent=on?'글씨 보통':'글씨 크게';}
+  try{set(localStorage.getItem('bigText')==='1');}catch(e){}
+  btn.addEventListener('click',function(){var on=!root.classList.contains('big');set(on);try{localStorage.setItem('bigText',on?'1':'0');}catch(e){}});
+  var ob=document.getElementById('openBtn'), ds=document.querySelectorAll('details');
+  function sync(){var all=Array.prototype.every.call(ds,function(d){return d.open;});ob.textContent=all?'모두 접기':'모두 펼치기';}
+  ob.addEventListener('click',function(){var all=Array.prototype.every.call(ds,function(d){return d.open;});ds.forEach(function(d){d.open=!all;});sync();});
+  ds.forEach(function(d){d.addEventListener('toggle',sync);});
+})();
+</script>
+
+</body></html>

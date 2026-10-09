@@ -1,0 +1,262 @@
+<!doctype html><html lang="ko"><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>로테플러스 점안현탁액 안내</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;600;700&family=Gothic+A1:wght@800;900&display=swap">
+<style>
+/* 레이아웃: 한 줄짜리 세로 흐름, 큰 글씨, 섹션마다 굵은 제목 + 짧은 문장 */
+:root{
+  --bg:#f7f9fb; --card:#ffffff; --fg:#14202b; --muted:#4a5866;
+  --accent:#0b5c8a; --accent-soft:#e2eef6; --warn:#a3361a; --warn-soft:#fbe9e3; --line:#cfd9e2;
+  --display:"Gothic A1","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --body:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --base:21px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f161d; --card:#17212b; --fg:#eef3f7; --muted:#b4c2cf;
+  --accent:#7cc4ee; --accent-soft:#1c3446; --warn:#ff9d80; --warn-soft:#3a211a; --line:#2c3a47; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f161d; --card:#17212b; --fg:#eef3f7; --muted:#b4c2cf;
+  --accent:#7cc4ee; --accent-soft:#1c3446; --warn:#ff9d80; --warn-soft:#3a211a; --line:#2c3a47; color-scheme:dark}
+html{font-size:var(--base)}
+html.big{font-size:26px}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:1rem;line-height:1.65;word-break:keep-all}
+.wrap{max-width:40rem;margin:0 auto;padding-inline:16px;padding-block:20px 48px;display:flex;flex-direction:column;gap:1.1rem}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.tag{font-size:.8rem;font-weight:700;color:var(--accent);background:var(--accent-soft);padding:.2rem .7rem;border-radius:99px}
+.size{font:inherit;font-size:.85rem;font-weight:700;color:var(--fg);background:var(--card);border:2px solid var(--line);border-radius:12px;padding:.35rem .9rem;cursor:pointer;min-height:48px}
+.size:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+h1{font-family:var(--display);font-weight:900;font-size:2rem;line-height:1.2;margin:0;text-wrap:balance}
+.sub{color:var(--muted);margin:.2rem 0 0;font-size:.9rem}
+.dose{background:var(--accent);color:var(--bg);border-radius:18px;padding:1.1rem 1.2rem;display:flex;flex-direction:column;gap:.2rem}
+.dose b{font-family:var(--display);font-weight:900;font-size:1.7rem;line-height:1.25}
+.dose span{font-size:.95rem}
+section{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:1.1rem 1.2rem;display:flex;flex-direction:column;gap:.6rem;min-width:0}
+h2{font-family:var(--display);font-weight:800;font-size:1.3rem;margin:0;color:var(--accent)}
+section.warn{background:var(--warn-soft);border-color:var(--warn)}
+section.warn h2{color:var(--warn)}
+p{margin:0}
+ul,ol{margin:0;padding-left:1.4rem;display:flex;flex-direction:column;gap:.5rem}
+ol.steps{list-style:none;padding:0;counter-reset:s;gap:.8rem}
+ol.steps li{counter-increment:s;display:grid;grid-template-columns:2.2rem 1fr;gap:.7rem;align-items:start}
+ol.steps li::before{content:counter(s);font-family:var(--display);font-weight:900;width:2.2rem;height:2.2rem;border-radius:50%;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;font-size:1.05rem}
+.side{display:flex;flex-wrap:wrap;gap:.5rem}
+.side span{background:var(--accent-soft);border-radius:10px;padding:.25rem .7rem;font-size:.9rem}
+.phone{font-family:var(--display);font-weight:800;font-size:1.4rem;letter-spacing:.02em;user-select:all;font-variant-numeric:tabular-nums}
+.note{color:var(--muted);font-size:.8rem}
+small{font-size:.8rem;color:var(--muted)}
+details{border-top:1px dashed var(--line);padding-top:.6rem}
+summary{cursor:pointer;list-style:none;display:inline-flex;align-items:center;gap:.4rem;font-weight:700;color:var(--accent);min-height:48px;padding:.2rem .1rem;text-decoration:underline;text-underline-offset:4px}
+section.warn summary{color:var(--warn)}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:var(--display);font-weight:900;font-size:1.2rem;text-decoration:none;display:inline-block}
+details[open] summary::after{content:"−"}
+summary:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:6px}
+.more{display:flex;flex-direction:column;gap:.6rem;font-size:.92rem;padding-top:.3rem}
+.more h3{font-size:.95rem;margin:.3rem 0 0;font-weight:700}
+.tbl{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:.88rem;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:.4rem .5rem;border-bottom:1px solid var(--line);vertical-align:top}
+td.n,th.n{text-align:right;white-space:nowrap}
+.link{display:inline-block;color:var(--accent);font-weight:700;text-underline-offset:4px;padding:.3rem 0}
+.toggles{display:flex;gap:.5rem;flex-wrap:wrap}
+@media (prefers-reduced-motion: reduce){*{scroll-behavior:auto}}
+.back{display:inline-flex;align-items:center;min-height:48px;font-weight:700;font-size:1rem;color:var(--accent);text-decoration:underline;text-underline-offset:4px}.back:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:6px}
+</style>
+
+<div class="wrap">
+  <a class="back" href="../index.html">← 약 목록으로</a>
+  <div class="top">
+    <span class="tag">눈에 넣는 약 · 전문의약품</span>
+    <div class="toggles">
+      <button class="size" id="openBtn" type="button">모두 펼치기</button>
+      <button class="size" id="sizeBtn" type="button" aria-pressed="false">글씨 크게</button>
+    </div>
+  </div>
+
+  <header>
+    <h1>로테플러스 점안현탁액</h1>
+    <p class="sub">염증·세균 함께 잡는 안약(스테로이드+항생제) · 흔들어 쓰는 병 · 한림제약</p>
+  </header>
+
+  <div class="dose" role="note">
+    <b>한 번에 1~2방울<br>하루 4번</b>
+    <span>넣기 전에 병을 <b>세게 흔드세요.</b></span>
+    <span>의사·약사가 다르게 알려줬다면 그 말씀을 따르세요.</span>
+  </div>
+
+  <section>
+    <h2>어떤 약인가요?</h2>
+    <p><b>눈이 가렵고 붉게 붓는 알레르기 염증</b>(계절성 알레르기성 결막염)을 가라앉히고, 함께 생긴 <b>세균 감염</b>을 치료하거나 막는 안약입니다.</p>
+    <details>
+      <summary>자세히 보기</summary>
+      <div class="more">
+        <h3>효능·효과</h3>
+        <p>눈 표면에 세균 감염이 있거나 감염 위험이 있는 계절성 알레르기성 결막염에서, 스테로이드가 듣는 염증을 치료합니다.</p>
+        <h3>어떻게 작용하나요?</h3>
+        <p>두 가지 성분이 들어 있습니다. 로테프레드놀은 스테로이드로 염증과 붓기를 가라앉히고, 토브라마이신은 항생제로 세균을 없앱니다.</p>
+        <p>포도상구균, 연쇄상구균, 녹농균, 대장균, 헤모필루스 등 여러 세균에 효과가 있습니다.</p>
+        <h3>성분 (1mL 중)</h3>
+        <p>로테프레드놀에타보네이트 5.0mg, 토브라마이신 3.0mg.</p>
+        <p>보존제로 벤잘코늄염화물 0.10mg이 들어 있습니다. 다른 첨가제는 글리세린, 수산화나트륨, 에데트산나트륨수화물, 주사용수, 틸록사폴, 포비돈, 염산입니다.</p>
+        <h3>모양</h3>
+        <p>흰색 불투명 플라스틱 병에 든, 흰색이나 옅은 노란색의 뿌연 액체(현탁액)입니다. 가만히 두면 성분이 가라앉기 때문에 흔들어서 씁니다.</p>
+      </div>
+    </details>
+  </section>
+
+  <section>
+    <h2>넣는 방법</h2>
+    <ol class="steps">
+      <li><span>손을 비누로 깨끗이 씻습니다.</span></li>
+      <li><span>콘택트렌즈를 끼고 있다면 <b>먼저 뺍니다.</b></span></li>
+      <li><span>뚜껑을 닫은 채 병을 <b>세게 흔듭니다.</b></span></li>
+      <li><span>뚜껑을 열고, 고개를 뒤로 젖혀 아래 눈꺼풀을 살짝 당깁니다.</span></li>
+      <li><span><b>1~2방울</b> 넣습니다. 병 끝이 눈·속눈썹·손에 <b>닿지 않게</b> 합니다.</span></li>
+      <li><span>눈을 감고 1분쯤 눈 안쪽 끝(코 쪽)을 가볍게 누릅니다.</span></li>
+      <li><span>뚜껑을 꼭 닫습니다.</span></li>
+    </ol>
+    <details>
+      <summary>자세히 보기</summary>
+      <div class="more">
+        <h3>하루 4번은 언제?</h3>
+        <p>깨어 있는 시간에 고르게 나누면 됩니다. 예를 들면 아침 8시, 낮 12시, 오후 4시, 밤 9시입니다.</p>
+        <p class="note">시간 예시는 일반적인 사용 요령입니다.</p>
+        <h3>왜 세게 흔드나요?</h3>
+        <p>약 성분이 물에 다 녹지 않고 떠 있는 약이라, 가만히 두면 바닥에 가라앉습니다. 흔들지 않으면 방울마다 약의 양이 달라집니다.</p>
+        <h3>잊어버렸을 때</h3>
+        <p>생각났을 때 넣고, 다음은 원래 시간에 넣으세요. 두 번 몫을 한꺼번에 넣지 마세요.</p>
+        <p class="note">일반적인 사용 요령입니다.</p>
+        <h3>눈 안쪽 끝을 누르는 이유</h3>
+        <p>약이 코로 흘러 내려가지 않고 눈에 오래 머물게 하는 일반적인 요령입니다.</p>
+        <h3>병 끝이 왜 닿으면 안 되나요?</h3>
+        <p>처음에는 균이 없는 약이지만, 병 끝이 어딘가에 닿으면 약이 오염될 수 있습니다.</p>
+        <h3>넣은 뒤 운전</h3>
+        <p>넣은 직후 잠깐 흐리게 보일 수 있습니다. 잘 보일 때까지 <b>운전이나 기계 작업을 하지 마세요.</b></p>
+      </div>
+    </details>
+  </section>
+
+  <section class="warn">
+    <h2>꼭 지켜 주세요</h2>
+    <ul>
+      <li>스테로이드가 든 약이라 오래 쓰면 <b>눈 속 압력(안압)이 오를 수</b> 있습니다. <b>녹내장이 있으시면</b> 꼭 안과 의사에게 알리세요.</li>
+      <li>의사가 정한 기간만큼 쓰고, <b>마음대로 중간에 끊지 마세요.</b> <b>2일</b>이 지나도 나아지지 않으면 다시 진료를 받으세요.</li>
+      <li>렌즈를 <b>낀 채로 넣지 마세요.</b> 넣고 <b>30분</b>이 지난 뒤 다시 끼세요.</li>
+      <li>병을 연 뒤 <b>4주가 지나면</b> 남은 약은 버립니다.</li>
+      <li>다른 안약도 쓰신다면 <b>5분 이상</b> 간격을 두세요.</li>
+    </ul>
+    <p class="note">마지막 항목은 일반적인 안약 사용 요령입니다.</p>
+    <details>
+      <summary>자세히 보기</summary>
+      <div class="more">
+        <h3>쓰면 안 되는 분</h3>
+        <ul>
+          <li>바이러스로 생긴 눈병이 있는 분(단순포진 각막염, 수두·우두 등)</li>
+          <li>눈에 결핵균 같은 마이코박테리아 감염이나 곰팡이(진균) 감염이 있는 분</li>
+          <li>이 약 성분이나 다른 스테로이드에 알레르기가 있었던 분</li>
+        </ul>
+        <h3>오래 쓸 때 생길 수 있는 문제</h3>
+        <ul>
+          <li>안압이 올라 시신경이 상하는 녹내장, 시력·시야가 줄어드는 문제</li>
+          <li>수정체 뒤쪽이 흐려지는 백내장</li>
+          <li>눈의 방어력이 떨어져 세균·곰팡이·바이러스 감염이 새로 생기거나 심해짐</li>
+          <li>각막이 얇아진 눈에서는 구멍이 날 수도 있습니다.</li>
+        </ul>
+        <p><b>10일 이상</b> 쓰는 경우에는 안압 검사를 받아야 합니다. 처음 처방은 20mL를 넘지 않고, 14일이 넘게 쓰려면 다시 눈 검사를 받은 뒤 처방받습니다.</p>
+        <h3>조심해서 써야 하는 분</h3>
+        <ul>
+          <li>녹내장이 있는 분</li>
+          <li>단순포진(헤르페스) 눈병을 앓은 적이 있는 분</li>
+          <li>백내장 수술을 받은 지 얼마 안 된 분: 상처가 늦게 아물 수 있습니다.</li>
+          <li>다른 항생제(아미노글리코사이드 계열)에 알레르기가 있었던 분</li>
+          <li>주사·먹는 약으로 같은 계열 항생제를 함께 쓰는 분: 피검사로 약 농도를 확인합니다.</li>
+        </ul>
+        <h3>임신 중이거나 수유 중인 분</h3>
+        <p>동물시험에서 태아에 해가 있었습니다. 이익이 더 클 때만 쓰며, 수유 중에도 신중히 씁니다. 의사에게 먼저 알리세요.</p>
+        <h3>어린이 · 고령자</h3>
+        <p>어린이에 대한 안전성은 확립되지 않았습니다. 고령자와 젊은 사람 사이에 차이는 관찰되지 않았습니다.</p>
+        <h3>보존제와 렌즈</h3>
+        <p>보존제(벤잘코늄)가 눈을 자극하고 소프트 렌즈 색을 바꿀 수 있습니다.</p>
+      </div>
+    </details>
+  </section>
+
+  <section>
+    <h2>이런 증상이 생길 수 있어요</h2>
+    <div class="side">
+      <span>눈 충혈</span><span>넣을 때 화끈·따끔</span><span>두통</span><span>눈 가려움</span><span>눈물 흘림</span><span>눈곱</span><span>눈부심</span><span>시야 흐림</span>
+    </div>
+    <p>가벼운 충혈이나 따끔거림은 흔합니다. 하지만 <b>눈 통증·붓기·가려움이 심해지거나, 잘 안 보이면</b> 의사·약사에게 바로 알리세요.</p>
+    <details>
+      <summary>자세히 보기 (얼마나 자주 생기나요?)</summary>
+      <div class="more">
+        <h3>42일 임상시험에서 보고된 증상</h3>
+        <div class="tbl"><table>
+          <thead><tr><th>증상</th><th class="n">빈도</th></tr></thead>
+          <tbody>
+            <tr><td>눈 충혈</td><td class="n">약 20%</td></tr>
+            <tr><td>각막 표면의 작은 상처(표층 점상 각막염)</td><td class="n">약 15%</td></tr>
+            <tr><td>두통</td><td class="n">14%</td></tr>
+            <tr><td>안압 상승 (가짜 약은 4%)</td><td class="n">10%</td></tr>
+            <tr><td>넣을 때 화끈거림·따끔거림</td><td class="n">9%</td></tr>
+            <tr><td>시야 이상, 눈곱, 가려움, 눈물, 눈부심, 각막 침착물, 눈 불편함, 눈꺼풀 이상</td><td class="n">4% 미만</td></tr>
+          </tbody>
+        </table></div>
+        <p>100명 중 약 20명이 눈 충혈을, 약 10명이 안압 상승을 겪었습니다. 그래서 쓰는 동안 안압 검사가 중요합니다.</p>
+        <h3>스테로이드 성분 단독 자료</h3>
+        <p>28일 이상 쓴 사람 중 안압이 크게(10mmHg 이상) 오른 경우는 2%였습니다. 다른 스테로이드(프레드니솔론)는 7%, 가짜 약은 0.5%였습니다.</p>
+        <h3>항생제 성분 관련</h3>
+        <p>눈꺼풀 가려움·붓기, 결막 붉어짐 같은 알레르기 반응이 4% 미만에서 생겼습니다. 오래 쓰면 약이 듣지 않는 균이나 곰팡이가 늘 수 있습니다.</p>
+        <h3>부작용이 생겼다면</h3>
+        <p>심한 부작용으로 피해를 입은 경우 한국의약품안전관리원(1644-6223 또는 14-3330)에 피해구제를 신청할 수 있습니다.</p>
+        <p class="note">수치는 사진 속 설명서에서 읽은 것으로, 구겨져 흐린 부분은 원본과 다를 수 있습니다.</p>
+      </div>
+    </details>
+  </section>
+
+  <section>
+    <h2>보관 방법</h2>
+    <ul>
+      <li>열기 전: <b>냉장고(2~8℃)</b></li>
+      <li>연 뒤: 실온(1~30℃)에서 <b>4주</b>만 사용</li>
+      <li>햇빛을 피하고, 습기가 적은 서늘한 곳에 뚜껑을 꼭 닫아서</li>
+      <li>어린이 손이 닿지 않는 곳, 다른 통에 옮겨 담지 않기</li>
+    </ul>
+    <details>
+      <summary>자세히 보기</summary>
+      <div class="more">
+        <p>공기가 잘 들어가지 않는 병(기밀용기)입니다. 한 병은 5mL입니다.</p>
+        <p>설명서에는 "개봉 후 30일"과 "4주간"이 함께 적혀 있습니다. 더 짧은 <b>4주</b>를 기준으로 삼으세요.</p>
+        <p>처음 연 날짜를 병이나 상자에 적어 두면 잊지 않기 좋습니다.</p>
+        <p class="note">일반적인 사용 요령입니다.</p>
+        <p>유효기간이 지났거나 변질·오염된 약은 쓰지 마세요. 산 약국에서 교환이나 환불을 받을 수 있습니다. 사용기한은 상자에 적혀 있습니다.</p>
+      </div>
+    </details>
+  </section>
+
+  <section>
+    <h2>궁금할 때 전화</h2>
+    <p>한림제약 소비자 상담</p>
+    <p class="phone">02-3489-6114</p>
+    <p>약 부작용 피해구제 상담 (한국의약품안전관리원)</p>
+    <p class="phone">1644-6223</p>
+    <a class="link" href="https://nedrug.mfds.go.kr/searchDrug?itemName=%EB%A1%9C%ED%85%8C%ED%94%8C%EB%9F%AC%EC%8A%A4" target="_blank" rel="noopener">식약처 의약품안전나라에서 공식 설명서 보기 ↗</a>
+  </section>
+
+  <small>성분: 1mL 중 로테프레드놀에타보네이트 5.0mg, 토브라마이신 3.0mg(보존제 벤잘코늄염화물 0.10mg 포함) · 5mL/병. 제조·판매 한림제약. 설명서 작성일 2022년 10월 21일. 제품 설명서를 쉽게 정리한 안내이며, 자세한 내용은 원래 설명서와 의사·약사의 안내를 따르세요.</small>
+</div>
+
+<script>
+(function(){
+  var btn=document.getElementById('sizeBtn'), root=document.documentElement;
+  function set(on){root.classList.toggle('big',on);btn.setAttribute('aria-pressed',on);btn.textContent=on?'글씨 보통':'글씨 크게';}
+  try{set(localStorage.getItem('bigText')==='1');}catch(e){}
+  btn.addEventListener('click',function(){var on=!root.classList.contains('big');set(on);try{localStorage.setItem('bigText',on?'1':'0');}catch(e){}});
+  var ob=document.getElementById('openBtn'), ds=document.querySelectorAll('details');
+  function sync(){var all=Array.prototype.every.call(ds,function(d){return d.open;});ob.textContent=all?'모두 접기':'모두 펼치기';}
+  ob.addEventListener('click',function(){var all=Array.prototype.every.call(ds,function(d){return d.open;});ds.forEach(function(d){d.open=!all;});sync();});
+  ds.forEach(function(d){d.addEventListener('toggle',sync);});
+})();
+</script>
+
+</body></html>

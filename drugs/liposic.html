@@ -1,0 +1,243 @@
+<!doctype html><html lang="ko"><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>리포직 점안겔 안내</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;600;700&family=Gothic+A1:wght@800;900&display=swap">
+<style>
+/* 레이아웃: 한 줄짜리 세로 흐름, 큰 글씨, 섹션마다 굵은 제목 + 짧은 문장 */
+:root{
+  --bg:#f7f9fb; --card:#ffffff; --fg:#14202b; --muted:#4a5866;
+  --accent:#0b5c8a; --accent-soft:#e2eef6; --warn:#a3361a; --warn-soft:#fbe9e3; --line:#cfd9e2;
+  --display:"Gothic A1","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --body:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --base:21px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f161d; --card:#17212b; --fg:#eef3f7; --muted:#b4c2cf;
+  --accent:#7cc4ee; --accent-soft:#1c3446; --warn:#ff9d80; --warn-soft:#3a211a; --line:#2c3a47; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f161d; --card:#17212b; --fg:#eef3f7; --muted:#b4c2cf;
+  --accent:#7cc4ee; --accent-soft:#1c3446; --warn:#ff9d80; --warn-soft:#3a211a; --line:#2c3a47; color-scheme:dark}
+html{font-size:var(--base)}
+html.big{font-size:26px}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:1rem;line-height:1.65;word-break:keep-all}
+.wrap{max-width:40rem;margin:0 auto;padding-inline:16px;padding-block:20px 48px;display:flex;flex-direction:column;gap:1.1rem}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.tag{font-size:.8rem;font-weight:700;color:var(--accent);background:var(--accent-soft);padding:.2rem .7rem;border-radius:99px}
+.size{font:inherit;font-size:.85rem;font-weight:700;color:var(--fg);background:var(--card);border:2px solid var(--line);border-radius:12px;padding:.35rem .9rem;cursor:pointer;min-height:48px}
+.size:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+h1{font-family:var(--display);font-weight:900;font-size:2rem;line-height:1.2;margin:0;text-wrap:balance}
+.sub{color:var(--muted);margin:.2rem 0 0;font-size:.9rem}
+.dose{background:var(--accent);color:var(--bg);border-radius:18px;padding:1.1rem 1.2rem;display:flex;flex-direction:column;gap:.2rem}
+.dose b{font-family:var(--display);font-weight:900;font-size:1.7rem;line-height:1.25}
+.dose span{font-size:.95rem}
+section{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:1.1rem 1.2rem;display:flex;flex-direction:column;gap:.6rem;min-width:0}
+h2{font-family:var(--display);font-weight:800;font-size:1.3rem;margin:0;color:var(--accent)}
+section.warn{background:var(--warn-soft);border-color:var(--warn)}
+section.warn h2{color:var(--warn)}
+p{margin:0}
+ul,ol{margin:0;padding-left:1.4rem;display:flex;flex-direction:column;gap:.5rem}
+ol.steps{list-style:none;padding:0;counter-reset:s;gap:.8rem}
+ol.steps li{counter-increment:s;display:grid;grid-template-columns:2.2rem 1fr;gap:.7rem;align-items:start}
+ol.steps li::before{content:counter(s);font-family:var(--display);font-weight:900;width:2.2rem;height:2.2rem;border-radius:50%;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;font-size:1.05rem}
+.side{display:flex;flex-wrap:wrap;gap:.5rem}
+.side span{background:var(--accent-soft);border-radius:10px;padding:.25rem .7rem;font-size:.9rem}
+.phone{font-family:var(--display);font-weight:800;font-size:1.4rem;letter-spacing:.02em;user-select:all;font-variant-numeric:tabular-nums}
+.note{color:var(--muted);font-size:.8rem}
+small{font-size:.8rem;color:var(--muted)}
+details{border-top:1px dashed var(--line);padding-top:.6rem}
+summary{cursor:pointer;list-style:none;display:inline-flex;align-items:center;gap:.4rem;font-weight:700;color:var(--accent);min-height:48px;padding:.2rem .1rem;text-decoration:underline;text-underline-offset:4px}
+section.warn summary{color:var(--warn)}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:var(--display);font-weight:900;font-size:1.2rem;text-decoration:none;display:inline-block}
+details[open] summary::after{content:"−"}
+summary:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:6px}
+.more{display:flex;flex-direction:column;gap:.6rem;font-size:.92rem;padding-top:.3rem}
+.more h3{font-size:.95rem;margin:.3rem 0 0;font-weight:700}
+.tbl{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:.88rem;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:.4rem .5rem;border-bottom:1px solid var(--line);vertical-align:top}
+td.n,th.n{text-align:right;white-space:nowrap}
+.link{display:inline-block;color:var(--accent);font-weight:700;text-underline-offset:4px;padding:.3rem 0}
+.toggles{display:flex;gap:.5rem;flex-wrap:wrap}
+@media (prefers-reduced-motion: reduce){*{scroll-behavior:auto}}
+.back{display:inline-flex;align-items:center;min-height:48px;font-weight:700;font-size:1rem;color:var(--accent);text-decoration:underline;text-underline-offset:4px}.back:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:6px}
+</style>
+
+<div class="wrap">
+  <a class="back" href="../index.html">← 약 목록으로</a>
+  <div class="top">
+    <span class="tag">눈에 넣는 약 · 일반의약품</span>
+    <div class="toggles">
+      <button class="size" id="openBtn" type="button">모두 펼치기</button>
+      <button class="size" id="sizeBtn" type="button" aria-pressed="false">글씨 크게</button>
+    </div>
+  </div>
+
+  <header>
+    <h1>리포직 점안겔</h1>
+    <p class="sub">눈 마름 완화제 · 젤 형태 튜브 · 바슈헬스코리아 수입</p>
+  </header>
+
+  <div class="dose" role="note">
+    <b>한 번에 1방울<br>하루 2~5번</b>
+    <span>잠자리에 들기 <b>30분 전</b>에 넣으세요.</span>
+    <span>의사·약사가 다르게 알려줬다면 그 말씀을 따르세요.</span>
+  </div>
+
+  <section>
+    <h2>어떤 약인가요?</h2>
+    <p><b>눈이 뻑뻑하고 마른 증상</b>(안구건조증)을 덜어 주는 젤 형태의 안약입니다.</p>
+    <details>
+      <summary>자세히 보기</summary>
+      <div class="more">
+        <h3>효능·효과</h3>
+        <p>눈의 건조 증상을 완화합니다.</p>
+        <h3>어떻게 작용하나요?</h3>
+        <p>끈적한 젤이 눈 표면을 덮어 촉촉하게 감싸 줍니다. 물 같은 안약보다 눈에 오래 머뭅니다.</p>
+        <p class="note">작용 원리는 일반적인 설명입니다.</p>
+        <h3>성분 (1g 중)</h3>
+        <p>카보머 2mg.</p>
+        <p>보존제로 세트리미드 0.1mg이 들어 있습니다. 다른 첨가제는 중쇄 트리글리세라이드, 소르비톨, 수산화나트륨, 정제수입니다.</p>
+        <h3>모양</h3>
+        <p>튜브에 든 하얗고 뿌연, 끈적한 젤입니다. 짜면 방울로 떨어집니다.</p>
+        <h3>오래 써야 하는 경우</h3>
+        <p>눈 마름으로 각막·결막이 상한 경우(건조성 각결막염)는 보통 오래 치료해야 합니다. 안과 의사와 상의하세요.</p>
+      </div>
+    </details>
+  </section>
+
+  <section>
+    <h2>넣는 방법</h2>
+    <ol class="steps">
+      <li><span>손을 비누로 깨끗이 씻습니다.</span></li>
+      <li><span>콘택트렌즈를 끼고 있다면 <b>먼저 뺍니다.</b></span></li>
+      <li><span>튜브 뚜껑을 열고, 고개를 뒤로 젖혀 아래 눈꺼풀을 살짝 당깁니다.</span></li>
+      <li><span>튜브를 살짝 눌러 <b>작은 1방울</b>을 넣습니다. 튜브 끝이 눈·속눈썹에 <b>닿지 않게</b> 합니다.</span></li>
+      <li><span>눈을 감고 잠시 기다립니다. 잠깐 <b>흐려 보이는 것</b>은 정상입니다.</span></li>
+      <li><span>뚜껑을 꼭 닫습니다.</span></li>
+    </ol>
+    <details>
+      <summary>자세히 보기</summary>
+      <div class="more">
+        <h3>하루 2~5번은 언제?</h3>
+        <p>눈 마름 정도에 따라 2~5번 넣습니다. 예를 들어 하루 4번이라면 아침 8시, 낮 12시, 오후 5시, 잠자기 30분 전에 넣으면 됩니다.</p>
+        <p class="note">시간 예시는 일반적인 사용 요령입니다.</p>
+        <h3>왜 잠자기 30분 전에?</h3>
+        <p>자기 직전에 넣으면 젤 때문에 눈꺼풀이 서로 붙을 수 있습니다. 그래서 30분쯤 여유를 둡니다.</p>
+        <h3>왜 작은 방울로?</h3>
+        <p>젤이 많으면 눈꺼풀이 달라붙기 쉽습니다. 작은 방울 하나면 충분합니다.</p>
+        <h3>잊어버렸을 때</h3>
+        <p>생각났을 때 1방울 넣고, 다음은 원래 시간에 넣으세요. 두 번 몫을 한꺼번에 넣지 마세요.</p>
+        <p class="note">일반적인 사용 요령입니다.</p>
+        <h3>튜브 끝이 왜 닿으면 안 되나요?</h3>
+        <p>눈곱이나 곰팡이 등이 들어가 약이 오염되거나 흐려질 수 있습니다. 흐려진 약은 쓰지 마세요.</p>
+      </div>
+    </details>
+  </section>
+
+  <section class="warn">
+    <h2>꼭 지켜 주세요</h2>
+    <ul>
+      <li><b>눈에만</b> 넣는 약입니다. 다른 사람과 <b>함께 쓰지 마세요.</b></li>
+      <li>다른 안약도 쓰신다면 <b>15분 이상</b> 간격을 두고, 이 약은 <b>맨 나중에</b> 넣으세요.</li>
+      <li>콘택트렌즈는 넣은 뒤 <b>30분이 지나서</b> 다시 끼세요.</li>
+      <li>넣은 직후 잠깐 흐려 보입니다. 그동안 <b>운전이나 기계 작업</b>은 피하세요.</li>
+      <li>처음 연 날부터 <b>28일이 지나면</b> 남아도 버리세요.</li>
+    </ul>
+    <details>
+      <summary>자세히 보기</summary>
+      <div class="more">
+        <h3>쓰면 안 되는 분</h3>
+        <p>이 약이나 이 약의 성분에 과민반응(알레르기)을 보인 적이 있는 분.</p>
+        <h3>쓰기 전에 의사·약사와 상의할 분</h3>
+        <ul>
+          <li>눈 통증이 심한 분</li>
+          <li>안약 때문에 눈 충혈, 가려움, 붓기 같은 알레르기가 생긴 적이 있는 분</li>
+          <li>지금 의사에게 치료를 받고 있는 분</li>
+          <li>임신 중이거나 임신 가능성이 있는 분, 수유 중인 분</li>
+          <li>어린이</li>
+        </ul>
+        <h3>임신 중이거나 수유 중인 분</h3>
+        <p>사람에게 쓴 경험이 없습니다. 이론적으로 위험은 없다고 하지만, 원칙적으로 신중하게 써야 합니다. 의사에게 먼저 알리세요.</p>
+        <h3>어린이</h3>
+        <p>어린이에게 쓴 경험이 없어 안전성이 확립되지 않았습니다. 의사의 책임 아래 사용합니다.</p>
+        <h3>왜 맨 나중에 넣나요?</h3>
+        <p>젤이 눈 표면을 덮기 때문에, 먼저 넣으면 뒤에 넣는 물 안약이 잘 스며들지 않을 수 있습니다.</p>
+        <p class="note">이유는 일반적인 설명입니다.</p>
+        <h3>28일을 잊지 않으려면</h3>
+        <p>처음 연 날짜를 튜브나 상자에 적어 두세요.</p>
+        <p class="note">일반적인 사용 요령입니다.</p>
+      </div>
+    </details>
+  </section>
+
+  <section>
+    <h2>이런 증상이 생길 수 있어요</h2>
+    <div class="side">
+      <span>가벼운 따끔거림</span><span>눈 화끈거림</span><span>눈썹 붙음</span><span>눈 충혈</span><span>시야 흐림</span><span>가려움</span><span>불편감</span>
+    </div>
+    <p>이런 증상이 생기면 <b>약을 멈추고</b> 이 설명서를 들고 병원이나 약국에 알리세요.</p>
+    <details>
+      <summary>자세히 보기</summary>
+      <div class="more">
+        <h3>설명서에 적힌 증상</h3>
+        <ul>
+          <li>보존제 때문에 넣을 때 가벼운 따끔거림(자극감)</li>
+          <li>화끈거림(설명서 표현: 발열 현상), 눈썹이 서로 붙음</li>
+          <li>눈 충혈, 시야 흐림, 가려움, 불편감</li>
+          <li>눈꺼풀 안쪽에 오돌토돌한 돌기가 생기는 염증(거대유두결막염), 검은자의 얼룩(각막반점), 흰자 겉층의 염증(공막바깥염)</li>
+        </ul>
+        <h3>얼마나 자주 생기나요?</h3>
+        <p>이 설명서에는 증상별 빈도(몇 %)가 나와 있지 않습니다.</p>
+        <h3>부작용이 생겼다면</h3>
+        <p>심한 부작용으로 피해를 입은 경우 한국의약품안전관리원(1644-6223)에 피해구제를 신청할 수 있습니다.</p>
+      </div>
+    </details>
+  </section>
+
+  <section>
+    <h2>보관 방법</h2>
+    <ul>
+      <li>실온(<b>25℃ 이하</b>), 햇빛이 들지 않고 습기가 적은 서늘한 곳</li>
+      <li>어린이 손이 닿지 않는 곳</li>
+      <li>다른 통에 옮겨 담지 않기</li>
+      <li>쓴 뒤에는 뚜껑을 꼭 닫기</li>
+    </ul>
+    <details>
+      <summary>자세히 보기</summary>
+      <div class="more">
+        <p>공기가 잘 들어가지 않는 튜브(기밀용기)에 담겨 있습니다. 한 튜브는 10g입니다.</p>
+        <p>처음 연 뒤 28일이 지나면 남은 약은 버립니다.</p>
+        <p>여름철 차 안처럼 뜨거운 곳은 피하세요.</p>
+        <p class="note">일반적인 사용 요령입니다.</p>
+        <p>약이 흐려졌거나 변질된 것, 유효기간이 지난 것은 쓰지 마세요. 살 때 이미 그랬다면 구입처에서 교환할 수 있습니다.</p>
+      </div>
+    </details>
+  </section>
+
+  <section>
+    <h2>궁금할 때 전화</h2>
+    <p>바슈헬스코리아 소비자상담실</p>
+    <p class="phone">080-080-3378</p>
+    <p>약 부작용 피해구제 상담 (한국의약품안전관리원)</p>
+    <p class="phone">1644-6223</p>
+    <a class="link" href="https://nedrug.mfds.go.kr/searchDrug?itemName=%EB%A6%AC%ED%8F%AC%EC%A7%81" target="_blank" rel="noopener">식약처 의약품안전나라에서 공식 설명서 보기 ↗</a>
+  </section>
+
+  <small>성분: 1g 중 카보머 2mg(보존제 세트리미드 0.1mg 포함) · 10g 튜브. 제조: Dr. Gerhard Mann(독일), 수입: 바슈헬스코리아. 설명서 개정 2019.08.01. 제품 설명서를 쉽게 정리한 안내이며, 자세한 내용은 원래 설명서와 의사·약사의 안내를 따르세요.</small>
+</div>
+
+<script>
+(function(){
+  var btn=document.getElementById('sizeBtn'), root=document.documentElement;
+  function set(on){root.classList.toggle('big',on);btn.setAttribute('aria-pressed',on);btn.textContent=on?'글씨 보통':'글씨 크게';}
+  try{set(localStorage.getItem('bigText')==='1');}catch(e){}
+  btn.addEventListener('click',function(){var on=!root.classList.contains('big');set(on);try{localStorage.setItem('bigText',on?'1':'0');}catch(e){}});
+  var ob=document.getElementById('openBtn'), ds=document.querySelectorAll('details');
+  function sync(){var all=Array.prototype.every.call(ds,function(d){return d.open;});ob.textContent=all?'모두 접기':'모두 펼치기';}
+  ob.addEventListener('click',function(){var all=Array.prototype.every.call(ds,function(d){return d.open;});ds.forEach(function(d){d.open=!all;});sync();});
+  ds.forEach(function(d){d.addEventListener('toggle',sync);});
+})();
+</script>
+
+</body></html>

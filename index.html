@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>할아버지 약 목록</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;600;700&family=Gothic+A1:wght@800;900&display=swap">
+<style>
+/* 레이아웃: 약 안내문과 같은 톤, 큰 번호 버튼을 세로로 나열 (번호 = 약통에 붙인 번호)
+   약 목록은 drugs.json 한 곳에서만 관리합니다. */
+:root{
+  --bg:#f7f9fb; --card:#ffffff; --fg:#14202b; --muted:#4a5866;
+  --accent:#0b5c8a; --accent-soft:#e2eef6; --line:#cfd9e2;
+  --display:"Gothic A1","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --body:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --base:21px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f161d; --card:#17212b; --fg:#eef3f7; --muted:#b4c2cf;
+  --accent:#7cc4ee; --accent-soft:#1c3446; --line:#2c3a47; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f161d; --card:#17212b; --fg:#eef3f7; --muted:#b4c2cf;
+  --accent:#7cc4ee; --accent-soft:#1c3446; --line:#2c3a47; color-scheme:dark}
+html{font-size:var(--base)}
+html.big{font-size:26px}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:1rem;line-height:1.5;word-break:keep-all}
+.wrap{max-width:40rem;margin:0 auto;padding-inline:16px;padding-block:20px 48px;display:flex;flex-direction:column;gap:1.1rem}
+.top{display:flex;justify-content:flex-end}
+.size{font:inherit;font-size:.85rem;font-weight:700;color:var(--fg);background:var(--card);border:2px solid var(--line);border-radius:12px;padding:.35rem .9rem;cursor:pointer;min-height:48px}
+.size:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+h1{font-family:var(--display);font-weight:900;font-size:2rem;line-height:1.2;margin:0;text-wrap:balance}
+.sub{color:var(--muted);margin:.3rem 0 0;font-size:.9rem}
+ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.7rem}
+a.drug{display:grid;grid-template-columns:4.2rem 1fr auto;align-items:center;gap:1rem;background:var(--card);border:2px solid var(--line);border-radius:18px;padding:.8rem 1rem;color:var(--fg);text-decoration:none;min-height:5rem}
+a.drug:hover{border-color:var(--accent)}
+a.drug:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.num{width:4.2rem;height:4.2rem;border-radius:50%;background:var(--accent);color:var(--bg);display:grid;place-items:center;font-family:var(--display);font-weight:900;font-size:2rem;font-variant-numeric:tabular-nums}
+.label{min-width:0;display:flex;flex-direction:column}
+.label b{font-family:var(--display);font-weight:900;font-size:1.5rem;line-height:1.2}
+.label span{color:var(--muted);font-size:.85rem}
+.go{color:var(--accent);font-family:var(--display);font-weight:900;font-size:1.5rem}
+.msg{background:var(--card);border:2px dashed var(--line);border-radius:18px;padding:1rem;color:var(--muted)}
+small{font-size:.8rem;color:var(--muted)}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <div class="top">
+    <button class="size" id="sizeBtn" type="button" aria-pressed="false">글씨 크게</button>
+  </div>
+
+  <header>
+    <h1>할아버지 약</h1>
+    <p class="sub">약통에 적힌 번호를 누르면 그 약의 안내가 열립니다.</p>
+  </header>
+
+  <ul id="list"><li class="msg">약 목록을 불러오는 중입니다…</li></ul>
+
+  <small>각 안내는 제품 설명서를 쉽게 정리한 것입니다. 사용법은 의사·약사의 안내를 따르세요.</small>
+</div>
+
+<script>
+(function(){
+  var btn=document.getElementById('sizeBtn'), root=document.documentElement;
+  function set(on){root.classList.toggle('big',on);btn.setAttribute('aria-pressed',on);btn.textContent=on?'글씨 보통':'글씨 크게';}
+  try{set(localStorage.getItem('bigText')==='1');}catch(e){}
+  btn.addEventListener('click',function(){var on=!root.classList.contains('big');set(on);try{localStorage.setItem('bigText',on?'1':'0');}catch(e){}});
+
+  var list=document.getElementById('list');
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  fetch('drugs.json',{cache:'no-store'}).then(function(r){if(!r.ok)throw 0;return r.json();}).then(function(drugs){
+    drugs.sort(function(a,b){return a.no-b.no;});
+    list.innerHTML=drugs.map(function(d){
+      return '<li><a class="drug" href="'+esc(d.file)+'">'+
+        '<span class="num">'+esc(d.no)+'</span>'+
+        '<span class="label"><b>'+esc(d.no)+'번 약</b><span>'+esc(d.name)+' · '+esc(d.kind)+'</span></span>'+
+        '<span class="go" aria-hidden="true">›</span></a></li>';
+    }).join('');
+  }).catch(function(){
+    list.innerHTML='<li class="msg">약 목록을 불러오지 못했습니다. 잠시 뒤 페이지를 새로 고침해 주세요.</li>';
+  });
+})();
+</script>
+</body>
+</html>
